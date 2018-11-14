@@ -4,7 +4,7 @@
 %%==================================================
 
 % 双面打印
-\documentclass[doctor, openright, twoside]{sjtuthesis}
+\documentclass[master, openright, twoside]{sjtuthesis}
 % \documentclass[bachelor, openany, oneside, submit]{sjtuthesis}
 % \documentclass[master, review]{sjtuthesis}
 % \documentclass[%
@@ -62,19 +62,36 @@
 
 \mainmatter % 使用阿拉伯数字对正文编号
 
-% 正文内容
-\include{tex/intro}
-\include{tex/example}
-\include{tex/faq}
-\include{tex/summary}
+% 原正文内容：
+% \include{tex/intro}
+% \include{tex/formulation}
+% \include{tex/example}
+% \include{tex/faq}
+% \include{tex/summary}
+
+% 论文正文分为以下章
+\include{tex/introduction}           % 引言
+\include{tex/formulation}            % 问题介绍
+\include{tex/proposal}               % 一类改进的Levenberg-Marquardt算法介绍
+\include{tex/prove}                  % 一类改进的Levenberg-Marquardt算法收敛性分析
+\include{tex/numerical}              % 数值实验结果与实际应用问题
+\include{tex/parameter}              % 参数更新策略
+\include{tex/summary}                % 全文总结
+
 
 \appendix % 使用英文字母对附录编号
 
-% 附录内容，本科学位论文可以用翻译的文献替代。
-\include{tex/app_setup}
-\include{tex/app_eq}
-\include{tex/app_cjk}
-\include{tex/app_log}
+% 原附录内容，本科学位论文可以用翻译的文献替代。
+% 
+% \include{tex/app_setup}
+% \include{tex/app_eq}
+% \include{tex/app_cjk}
+% \include{tex/app_log}
+
+% 附录内容
+\include{tex/app_NN}               % 神经网络拓扑结构以及解释性
+\include{tex/app_AD}               % 解析导数与自动微分
+
 
 \backmatter % 文后无编号部分 
 
