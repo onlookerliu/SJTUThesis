@@ -10,6 +10,109 @@
 \chapter{引言}
 \label{chap:introduction}
 
-近年来，机器学习和人工智能的许多领域的发展
-神经网络\footnote{多层感知机(MLP)为神经网络的一种实现}通过前向传播和误差反向传播(EBP)算法\footnote{反向传播算法一般通过梯度法来实现}可以具有很好的表达能力。
 
+分类是将项目映射到一组相关的主要数据挖掘过程之一,预定义的对象或类。基于分类意义，获得任何决定并不复杂。但是，如果执行数据排序是一项特别困难的做法。数据排序是刺激维护其中一个组成其内容的主要属性。
+
+
+例如，基于其相关内容，文件类型对数据进行分类类型，工作平台，正常文件大小，以兆字节或千兆字节为单位。因此，必须要有一种必须自动停止的分类程序。通常，主要的分类方法包括统计技术，数学编程方法和其他机器学习方法[2]。因此，机器学习方案可用于执行数据分类方法。机器学习技术是最近的最佳分类方法之一发展。机器学习的主要目标是提升水平信息创造过程中的计算机化，取代了大量的时间通过常规技术进行人类活动，通过发现提高准确性或效率并利用训练数据的规律性。机器下有许多技术可用学习方法和机器学习研究的最重要目标是自动学习，识别复杂的模式，并构建基于的智力决策数据[3]。
+
+
+人工神经网络（ANN）是最好的机器学习方法之一。 ANN是以人脑为模型，包括称为人工神经元的处理单元，可以训练进行人脑等复合计算。与传统不同，输出基于其获得的输入的技术，ANN可以熟练收集，知道并猜测缺乏关于函数形式的信息的模式[4-10]。
+ANN具有随机非线性函数逼近和信息的能力，处理其他技术没有的[11]。之前应用了各种方法实现人工神经网络的最佳网络性能。一种这样的技术又回来了,传播神经网络（BPNN）算法[12]。因此存在一些固有的问题在BP算法中也经常遇到使用这种算法。这个限制是陷入局部极小值的风险，特别是对于非线性可分离的模式分类问题[13-15]，并有可能超越最小值错误表面[16]。在过去几年中，已经有许多数值优化技术用于改善反向传播算法的适应性，包括梯度下降[17-18]。这些算法包括使用启发式技术的直接增强方法，二阶方法。所有这些算法都是最陡梯度搜索的衍生物;然而，这个程序的一个约束，即梯度下降技术，就是它
+需要可区分的神经元传递函数。此外，由于神经网络产生复杂具有多个局部最小值的错误表面，BPNN落入局部最小值而不是全局极小值[19]。
+
+
+因此，ANN训练相对较慢，并且用于快速有效的训练，二阶训练必须使用学习算法。最有效的方法是Levenberg Marquardt（LM）算法，它是从牛顿方法导出的。 LM算法创建为用于提高神经网络收敛速度的最成功算法之一MLP架构[20]。这是非常复杂的算法，因为不仅是梯度而且还应计算雅可比矩阵。 LM算法仅用于开发逐层ANN拓扑结构，远非最优[21]。 LM算法排名为适用于中小型模式的最有效的训练算法之一。这是一个很好的牛顿和最速下降方法的结合[22]。它继承了牛顿的速度方法，但它也具有最速下降法的收敛能力。这适合特别是在训练神经网络中，其中性能指数以均值计算平方误差（MSE），但它仍然无法避免局部最小值[23-26]。为了解决这个问题，全局搜索优化技术就能够调整权重为NN避免局部最小问题[25]，如遗传算法，蚁群算法，杜鹃搜索[9]，蝙蝠算法[31]和粒子群优化[32]。人工蜂群神经网络（ABCNN）由Karaboga和Akay提出2007 [29]在培训过程中找到最佳权重。 ABCNN正在接受培训用于解决测试功能和分类目的的ANN [29,33]。后来，混合动力车用于训练神经网络算法的ABCBP由Ozturk和Karaboga提出但仍然该算法存在网络停滞[25]，因此需要一种更强大的方法提供更好的收敛。 ABC具有很强的查找全局最优结果和LM的能力算法具有对局部最优解的健康能力。结合的动机与LM的ABC是寻找一种简单而强大的优化方法。由此产生的ABC-LM算法用于训练XOR，3位奇偶校验和4位编码器 - 解码器基准问题。但是这些方法仍然收敛速度慢，仅用于小数据集。为了克服Levenberg Marquardt Back的缺点传播，本文首先提出了一种加速粒子群优化算法（APSO）[33]介绍。
+
+
+为了验证所提出的APSO-LM算法的优越性能，它是与基于人工蜂群算法的反向传播（ABCBP）相比，人工基于Levenberg Marquardt（ABCLM）算法的蜜蜂群算法，人工蜜蜂蚁群神经网络（ABCNN）算法和简单BPNN算法。主要目标通过使用，可以降低计算成本并加快ANN的学习过程杂交方法。它是基于对鸟类植绒的社会行为的模拟和鱼类学校。本文是[34]在以前版本中修订和扩展的研究版本，使用两个基准数据集进行实验，而当前版本使用7基准数据集，以严格显示收敛行为和性能提出了APSO-LM算法。此外，该方法的数学理论详细介绍。其余文件的组织如下。第2节解释了训练算法。第3节提出了APSO-LM算法。模拟结果将在第4节中讨论。最后，该论文在第5节中得出结论。
+
+
+神经网络\footnote{多层感知机(MLP)为神经网络的一种实现}通过前向传播和误差反向传播(EBP)算法\footnote{反向传播算法一般通过梯度法来实现}可以具有很好的表达能力。神经网络预测是目前比较前沿和热门的预测方法，人工神经网络是对人脑的抽象、简化和模拟。是一种应用类似于大脑神经突触链接的结构进行信息处理的数学模型。由大量节点和相互之间的加权连接构成。网络输出则根据网络的连接方式，权重矩阵和激活函数的不同而不同。实际应用中，80\%-90\%的人工神经网络的应用都采用BP神经网络算法或它的变形。BP神经网络是前向网络的核心部分，也是人工神经网络最精华的部分。BP神经网络算法在应用方面具有重要意义，但它也存在一些不足：存在局部极小点；学习算法的收敛速度慢；网络隐层节点数的选取带有很大的盲目性和经验性。针对BP神经网络算法存在的不足，出现了几种基于标准BP神经网络算法的 改进算法，例如梯度下降法，拟牛顿法和Levenberg-Marquardt算法等。通过实验发现，对于中小规模的神经网络，使用Levenberg-Marquardt算法的收敛速度比较好，而且计算精度比较高。
+
+
+作为BP神经网络的改进算法，Levenberg-Marquardt算法实际上是梯度下降和拟牛顿法的结合，该算法期望在不计算Hessian矩阵的情况下获得高阶的训练速度。其公式表达为： $x_{k+1} = x_k - (J^{\mathrm{T}}J + \mu I)^{-1} J^{\mathrm{T}}e$, 其中, $J^{\mathrm{T}}$ 为雅克比矩阵, $e$ 是网络误差向量 。如果 $\mu = 0$ 的话 , 就变成采用近似 Hessian 矩阵的拟牛顿法；如果 $\mu$ 很大，即成为小步长的度下降法, 由于牛顿法在误差极小点附近通常能够收敛的更快更准确 , 因此算法的目的就是尽快转换为牛顿法。如果某次迭代成功，误差性能函数减小，那么就减小 $\mu$ 的值 , 而如果迭代失败，就增加 $\mu$ 值。如此可以使得误差性能函数随着迭代的进行而下降到极小值。Matlab 工具箱提供了 Trainlm 函数用于 Levenberg-Marquardt算法的计算。
+
+
+LMBP（Levenberg-Marquardt Back-Propagation）是基于Levenberg-Marquardt方法的BP神经网络算法。它作为一种数值优化技术，并被广泛采用，以最大限度地减少非线性平方和损失函数。这个特点非常适合训练神经网络的性能指数是平均误差[40]。它是
+非常适合训练性能指数为均方的神经网络误差。LMBP网络拓扑结构与传统的BP神经网络类似，只不过是用Levenberg-Marquardt方法加速收敛。该Levenberg-Marquardt（LM）算法具有类似牛顿法的训练速度。本文中，Levenberg-Marquardt方法通过极小化平方和损失函数来最小化误差。平方和损失函数如下定义:
+\begin{equation}
+    E(t) = \frac{1}{2} \sum_{i=1}^{N} e_i^2(t)
+    \label{intro:squareError}
+\end{equation}
+其中 $e(t)$ 是误差；$N$ 是向量维数，那么
+\begin{equation}
+    \nabla E(t) = J^{T}(t) e(t)
+    \label{intro:gradientE}
+\end{equation}
+\begin{equation}
+    \nabla^2 E(t) = J^{T}(t)J(t) + S(t)
+    \label{intro:hessianE}
+\end{equation}
+其中 $\nabla E(t)$ 是 $E$ 的梯度; $\nabla^2 E(t)$ 是 $E$ 的 Hessian 矩阵
+\begin{equation}
+    S(t) = \sum_{i=1}^N e_i(t) \nabla^2e_i(t)
+    \label{intro:hessianRem}
+\end{equation}
+$J(t)$ 是Jacobian矩阵;
+\begin{equation}
+    J(t) = 
+    \begin{bmatrix}
+        &\frac{\partial v_1(t)}{\partial t_1} &\frac{\partial v_1(t)}{\partial t_2} &\cdots &\frac{\partial v_1(t)}{\partial t_n} \\
+        &\frac{\partial v_2(t)}{\partial t_1} &\frac{\partial v_2(t)}{\partial t_2} &\cdots &\frac{\partial v_2(t)}{\partial t_n} \\
+        &\vdots &\vdots &\ddots &\vdots \\
+        &\frac{\partial v_n(t)}{\partial t_1} &\frac{\partial v_n(t)}{\partial t_2} &\cdots &\frac{\partial v_n(t)}{\partial t_n}
+    \end{bmatrix}
+\end{equation}
+对于高斯牛顿方法
+\begin{equation}
+    \nabla t = - \left[ J ^ { T } ( t ) J ( t ) \right] ^ { - 1 } J ( t ) e ( t )
+    \label{intro:newtonGrad}
+\end{equation}
+而对于Levenberg-Marquardt方法，有
+\begin{equation}
+    \nabla t = - \left[ J ^ { T } ( t ) J ( t ) + \mu I \right] ^ { - 1 } J ( t ) e ( t )
+    \label{intro:lmGrad}
+\end{equation}
+其中 $\mu > 0$ 且为一个常数, $I$ 为单位矩阵。算法初始时候通常 $\mu$ 设置的比较小，例如 $\mu = 0.01$。如果一步迭代没有得到一个更小的 $E(t)$，那么在下一步中将 $\mu$ 乘上一个 $\theta > 1$，反之除以 $\theta$。该算法既有牛顿方法的速度又保证了收敛。
+
+
+考虑如下非线性方程组的求解
+\begin{equation}
+    F(x) = 0
+    \label{intro:feqzero}
+\end{equation}
+其中 $F(x): \mathbb{R}^n \mapsto \mathbb{R}^m$ 是连续可微函数。在本文中，我们总是假设\ref{intro:feqzero}的解集非空且记为 $X^{\star}$, $\Vert\cdot\Vert$ 表示二阶范数。
+
+
+Levenberg-Marquardt算法是由Levenberg(1994)提出，并由Marquardt(1963)重新发现的。Levenberg-Marquardt方法是一种牛顿类型的方法，利用如下线性方程组的解 $d_k$ 作为在点 $x_k$ 处的一个搜索方向:
+\begin{equation}
+    (J(x_k)^{\mathrm{T}} J(x_k) + \mu_k I) d = -J(x_k)^{\mathrm{T}}F(x_k)
+    \label{intro:lmStep}
+\end{equation}
+这里 $\mu_k \geq 0$ 是迭代参数，为了书写方便，下面将 $J(x_k)$ 和 $F(x_k)$ 简记 $J_k$ 和 $J_k$。
+
+
+Levenberg-Marquardt步\ref{intro:lmStep}是牛顿步
+\begin{equation}
+    d_k^N = -J_k^{-1} F_k
+    \label{intro:newtonStep}
+\end{equation}
+% \[
+%     d_k^N = -J_k^{-1} F_k
+%     \label{intro:newtonStep}
+% \]
+的一个改进，通过引入非负参数 $\mu_k$，Levenberg-Marquardt方法克服了 $J_k$ 几乎奇异或坏条件时牛顿步带来的困难。选取恰当的参数 $\mu_k$ 可以保证 $(J_k^{\mathrm{T}}J_k + \mu_k I)$ 非奇异，而且能避免出现过大的 $\Vert d_k\Vert$，另外，当 $J_k$ 奇异时，牛顿步\ref{intro:newtonStep}没有定义，而正参数 $\mu_k$ 保证了Levenberg-Marquardt步\ref{intro:lmStep}是有意义的。
+
+
+若 $J(x^{\star}) (x^{\star} \in X^{\star})$ 非奇异且初始点 $x^0$ 距离 $x^\star$ 充分靠近时，Levenberg-Marquardt方法\ref{intro:lmStep}产生的迭代点序列二阶收敛于 $x^\star$。
+
+
+在实际运用中，方程组精确解的Jacobi矩阵 $J(x^\star)$ 非奇异这个条件往往过强，而且非奇异条件表明该方法所得到的解是局部唯一的。Yamashita和Fukushima在某某某中证明了在弱于非奇异条件的局部误差界条件下，Levenberg-Marquardt方法在 $\mu_k = \Vert Ｆ(x_k)\Vert^2$ 时产生的点列二阶收敛于方程组的解集。Dan，Yamashita和Fukushima在某某某中证明了当选取参数为 $\mu_k = \Vert F_k \Vert^\delta, \delta \in (0, 2]$ 时，在局部误差条件下，非精确Levenberg-Marquardt方法具有超线性收敛性。范和袁在某某某中用另一种方法证明了 $\mu_k = \Vert F_k\Vert$时，Levenberg-Marquardt方法具有二阶收敛性。
+
+
+% TODO: 此处添加更多改进的Levenberg-Marquardt方法的细节
+本文将考虑一种改进的具有全局收敛和局部三阶收敛性质的Levenberg-Marquardt方法。
+
+
+传统Levenberg-Marquardt方法包括上面我们提到的改进的Levenberg-Marquardt方法在每次迭代时均需要更新Jacobi矩阵，并对 $J_k^{\mathrm{Ｔ}} J_k + \lambda_k I$ 进行求逆，若 $F$ 形式较为复杂或者输入的维数较大时，Jacobi矩阵和逆运算的计算量将会急速增加。为了简化计算，Fan，Huang与Pan对于Levenberg-Marquardt方法提出了一个自适应的思想。本文将该算法应用于反向传播算法中，给出了求解非线性方程组的案例以及某某某
