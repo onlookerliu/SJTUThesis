@@ -227,6 +227,8 @@ TSWLatexianTemp*
 
 # See https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
 # macOS General
+.idea
+.vscode
 .DS_Store
 .AppleDouble
 .LSOverride
